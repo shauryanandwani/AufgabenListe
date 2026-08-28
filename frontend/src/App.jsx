@@ -117,7 +117,7 @@ setError("Failed to delete. Please try again.");
 return (
     <div 
     className="min-h-screen bg-gray-200 flex justify-center items-center p-4 ">
-      <div className="bg-white rounded-10x1 shadow-x5 w-full max-w-lg p-10 border p-1 border-gray-300">
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg p-1 border-gray-300">
         <h1 className = "text-5xl font-bold text-gray-700 mb-8">Meine Aufgaben</h1>
         {error && (
           <div className ="bg-red-100 text-red-700 p-3 rounded mb-4">
@@ -126,9 +126,9 @@ return (
         )}
         <form 
         onSubmit = {onSubmitForm} 
-        className= "flex items-center gap-1 shadow-sm border p-2 rounded-lg mb-8">
+        className= "flex items-center gap-2 shadow-sm border p-2 rounded-lg mb-6">
           <input 
-          className= "flex-1 outline-none px-2 py-2 text-gray-700 font italic placeholder-gray-600"
+          className= "flex-1 outline-none px-3 py-2 text-gray-700 font italic placeholder-gray-600"
           type = "text" 
           value = {description} 
           onChange={(e) => setDescription(e.target.value)} 
