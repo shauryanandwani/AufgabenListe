@@ -8,7 +8,10 @@ const PORT = process.env.PORT || 4000;
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://frontend-08av.onrender.com"
+}));
+
 app.use(express.json());
 
 app.use("/todos", todoRoutes);
