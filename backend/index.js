@@ -8,9 +8,7 @@ const PORT = process.env.PORT || 4000;
 
 const app = express();
 
-app.use(cors({
-  origin: "https://frontend-08av.onrender.com"
-}));
+app.use(cors());
 
 app.use(express.json());
 
