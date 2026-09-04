@@ -123,7 +123,7 @@ return (
   }}><h1 className="absolute top-6 left-6 px-4 py-2 text-white text-2xl font-bold smooth-pop">
   AufgabenListe App by Shaurya Nandwani
 </h1>
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg p-1 border-gray-300">
+      <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-x5 w-full max-w-lg p-10 border p-1 border-gray-300 smooth-pop">
         <h1 className = "text-5xl font-bold text-gray-700 mb-8">Meine Aufgaben</h1>
         {error && (
           <div className ="bg-red-100 text-red-700 p-3 rounded mb-4">
@@ -132,25 +132,25 @@ return (
         )}
         <form 
         onSubmit = {onSubmitForm} 
-        className= "flex items-center gap-2 shadow-sm border p-2 rounded-lg mb-6">
+        className= "flex flex-col sm:flex-row items-stretch sm:items-center gap-2 shadow-sm border p-2 rounded-lg mb-8">
           <input 
-          className= "flex-1 outline-none px-3 py-2 text-gray-700 font italic placeholder-gray-600"
+          className= "flex-1 min-w-0 outline-none px-2 py-2 text-gray-700 placeholder-gray-600"
           type = "text" 
           value = {description} 
           onChange={(e) => setDescription(e.target.value)} 
-          placeholder = "Was müssen Sie heute erledigen?"
+          placeholder = "Was haben Sie heute vor"
           required
           />
           <button
-          className = "bg-blue-200 hover: bg-blue-500 text-white px-4 py-2 rounded-md font bold cursor-pointer"
+          className = "bg-blue-200 hover:bg-blue-500 text-white px-4 py-2 rounded-md font-bold cursor-pointer whitespace-nowrap"
           >Hinzufügen</button>
         </form>
         <div>
           {loading ? (
             <div>
-<p className ="text-gray-800">Augenblick bitte</p>
+<p className ="text-2xl font-bold text-gray-800">Wilkommen! Fügen Sie hier Ihre Aufgaben hinzu.</p>
             </div>) : todos.length === 0 ? (
-            <p className = "text-gray-800"> Keine Aufgaben hinzugefügt </p>
+            <p className = "text-gray-800">Wilkommen! Fügen Sie hier Ihre Aufgaben hinzu.</p>
 
           ): (
             <div className= "flex flex-col gap-y-4">
