@@ -116,7 +116,13 @@ setError("Failed to delete. Please try again.");
 
 return (
     <div 
-    className="min-h-screen bg-gray-200 flex justify-center items-center p-4 ">
+ className="min-h-screen bg-cover bg-center flex justify-center items-center p-4"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1554034483-04fda0d3507b?auto=format&fit=crop&fm=jpg&q=80&w=3000')"
+  }}><h1 className="absolute top-6 left-6 px-4 py-2 text-white text-2xl font-bold smooth-pop">
+  AufgabenListe App by Shaurya Nandwani
+</h1>
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg p-1 border-gray-300">
         <h1 className = "text-5xl font-bold text-gray-700 mb-8">Meine Aufgaben</h1>
         {error && (
