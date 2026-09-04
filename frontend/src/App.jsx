@@ -150,7 +150,7 @@ return (
             <div>
 <p className ="text-1xl font-bold text-gray-800 smooth-pop">Wilkommen! Fügen Sie hier Ihre Aufgaben hinzu.</p>
             </div>) : todos.length === 0 ? (
-            <p className = "text-1xl font-bold text-gray-800">Keine Aufgaben hinzugefügt.</p>
+            <p className = "text-1xl font-bold text-gray-800">Wilkommen! Fügen Sie hier Ihre Aufgaben hinzu.</p>
 
           ): (
             <div className= "flex flex-col gap-y-4">
