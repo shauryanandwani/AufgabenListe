@@ -25,7 +25,7 @@ function App() {
 } 
 catch (err) {
   console.error(err.message);
-  setError("Failed to fetch todos. Please try again later.");
+  setError("Schlechte Internet Verbindung! Aufrufen Ihrer Aufgaben fehlgeschlagen.");
 }
 finally{
   setLoading(false);
@@ -54,7 +54,7 @@ useEffect(() => {
       // Optionally, you can fetch the updated list of todos here.
     } catch (err) {
 console.error(err.message);
-setError("Failed to add todo. Please try again.");
+setError("Schlechte Internet Verbindung! Nicht hinzugefügt.");
     }
   };
 
@@ -81,7 +81,7 @@ setError("Failed to add todo. Please try again.");
       
     } catch (err) {
 console.error(err.message);
-setError("Failed to update todo. Please try again.");
+setError("Schlechte Internet Verbindung! Aktualiserung fehlgeschlagen.");
     }
   };
 
@@ -110,7 +110,7 @@ setError("Failed to delete. Please try again.");
         todos.map((todo) => todo.todo_id === id ? { ...todo, completed: !todo.completed } : todo));
     } catch (err) {
       console.error(err.message);
-      setError("Failed to update. Please try again.");
+      setError("Schlechte Internet Verbindung! Aktualiserung fehlgeschlagen.");
     }
   };
 
@@ -138,11 +138,11 @@ return (
           type = "text" 
           value = {description} 
           onChange={(e) => setDescription(e.target.value)} 
-          placeholder = "Was haben Sie heute vor"
+          placeholder = "Was haben Sie heute vor?"
           required
           />
           <button
-          className = "bg-blue-200 hover:bg-blue-500 text-white px-4 py-2 rounded-md font-bold cursor-pointer whitespace-nowrap"
+          className = "bg-blue-400 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-bold cursor-pointer whitespace-nowrap"
           >Hinzufügen</button>
         </form>
         <div>
