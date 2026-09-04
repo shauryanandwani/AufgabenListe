@@ -148,9 +148,9 @@ return (
         <div>
           {loading ? (
             <div>
-<p className ="text-2xl font-bold text-gray-800">Wilkommen! Fügen Sie hier Ihre Aufgaben hinzu.</p>
+<p className ="text-1xl font-bold text-gray-800 smooth-pop">Wilkommen! Fügen Sie hier Ihre Aufgaben hinzu.</p>
             </div>) : todos.length === 0 ? (
-            <p className = "text-gray-800">Wilkommen! Fügen Sie hier Ihre Aufgaben hinzu.</p>
+            <p className = "text-1xl font-bold text-gray-800">Keine Aufgaben hinzugefügt.</p>
 
           ): (
             <div className= "flex flex-col gap-y-4">
